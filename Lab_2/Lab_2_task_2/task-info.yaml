@@ -1,0 +1,59 @@
+type: output
+files:
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 1131
+    placeholder_text: |-
+      salary = 5000  # Ежемесячная зарплата
+      spend = 6000  # Траты за первый месяц
+      months = 10  # Количество месяцев, которое планируется протянуть без долгов
+      increase = 0.03  # Ежемесячный рост цен
+
+      # TODO Рассчитайте подушку безопасности, чтобы протянуть 10 месяцев без долгов
+
+      print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", ...)
+    initial_state:
+      length: 354
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      salary = 5000  # Ежемесячная зарплата
+      spend = 6000  # Траты за первый месяц
+      months = 10  # Количество месяцев, которое планируется протянуть без долгов
+      increase = 0.03  # Ежемесячный рост цен
+
+      money_capital = 0   # Подушка безопасности, чтобы протянуть 10 месяцев без долгов
+
+      for _ in range(months):
+          money_capital += spend - salary
+          spend *= 1 + increase
+
+      print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", round(money_capital))
+  text: |
+    salary = 5000  # Ежемесячная зарплата
+    spend = 6000  # Траты за первый месяц
+    months = 10  # Количество месяцев, которое планируется протянуть без долгов
+    increase = 0.03  # Ежемесячный рост цен
+
+    # TODO Рассчитайте подушку безопасности, чтобы протянуть 10 месяцев без долгов
+
+    print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", ...)
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Подушка безопасности, чтобы протянуть 10 месяцев без долгов: 18783
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 26 Oct 2023 18:53:16 UTC"
+record: -1
+solution_hidden: true
