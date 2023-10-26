@@ -1,0 +1,64 @@
+type: output
+files:
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Количество месяцев, которое можно протянуть без долгов: 8
+  learner_created: false
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 726
+    placeholder_text: |-
+      money_capital = 20000  # Подушка безопасности
+      salary = 5000  # Ежемесячная зарплата
+      spend = 6000  # Траты за первый месяц
+      increase = 0.05  # Ежемесячный рост цен
+
+      # TODO Посчитайте количество  месяцев, которое можно протянуть без долгов
+
+      print("Количество месяцев, которое можно протянуть без долгов:", ...)
+    initial_state:
+      length: 307
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      money_capital = 20000  # Подушка безопасности
+      salary = 5000  # Ежемесячная зарплата
+      spend = 6000  # Траты за первый месяц
+      increase = 0.05  # Ежемесячный рост цен
+
+      month = 0  # Количество месяцев, которое можно протянуть без долгов
+
+      while True:
+          delta = spend - salary
+          if delta > money_capital:
+              break
+
+          month += 1
+          money_capital -= delta
+          spend *= 1 + increase
+
+      print("Количество месяцев, которое можно протянуть без долгов:", month)
+  text: |
+    money_capital = 20000  # Подушка безопасности
+    salary = 5000  # Ежемесячная зарплата
+    spend = 6000  # Траты за первый месяц
+    increase = 0.05  # Ежемесячный рост цен
+
+    # TODO Посчитайте количество  месяцев, которое можно протянуть без долгов
+
+    print("Количество месяцев, которое можно протянуть без долгов:", ...)
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 26 Oct 2023 18:15:42 UTC"
+record: -1
+solution_hidden: true
