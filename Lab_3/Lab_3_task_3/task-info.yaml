@@ -1,0 +1,142 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 38
+    placeholder_text: '# TODO  Напишите функцию count_letters'
+    initial_state:
+      length: 38
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      def count_letters(text):
+          lower_text = text.lower()
+
+          letter_count = {}
+          for char in lower_text:
+              if char.isalpha():
+                  if char in letter_count:
+                      letter_count[char] += 1
+                  else:
+                      letter_count[char] = 1
+          return letter_count
+  - offset: 307
+    length: 43
+    placeholder_text: '# TODO Напишите функцию calculate_frequency'
+    initial_state:
+      length: 43
+      offset: 41
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: "def calculate_frequency(letter_count):\n    total_letters\
+      \ = sum(letter_count.values())\n    \n    letter_frequency = {}\n    for current_letter,\
+      \ count in letter_count.items():\n        letter_frequency[current_letter] =\
+      \ count / total_letters\n        \n    return letter_frequency"
+  - offset: 1485
+    length: 58
+    placeholder_text: '# TODO Распечатайте в столбик букву и её частоту в тексте'
+    initial_state:
+      length: 57
+      offset: 999
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      count_dict = count_letters(main_str)
+      frequency_dict = calculate_frequency(count_dict)
+
+      for letter, frequency in frequency_dict.items():
+          print(f"{letter}: {frequency:.2f}")
+  text: |
+    # TODO  Напишите функцию count_letters
+
+
+    # TODO Напишите функцию calculate_frequency
+
+
+    main_str = """
+    У лукоморья дуб зелёный;
+    Златая цепь на дубе том:
+    И днём и ночью кот учёный
+    Всё ходит по цепи кругом;
+    Идёт направо — песнь заводит,
+    Налево — сказку говорит.
+    Там чудеса: там леший бродит,
+    Русалка на ветвях сидит;
+    Там на неведомых дорожках
+    Следы невиданных зверей;
+    Избушка там на курьих ножках
+    Стоит без окон, без дверей;
+    Там лес и дол видений полны;
+    Там о заре прихлынут волны
+    На брег песчаный и пустой,
+    И тридцать витязей прекрасных
+    Чредой из вод выходят ясных,
+    И с ними дядька их морской;
+    Там королевич мимоходом
+    Пленяет грозного царя;
+    Там в облаках перед народом
+    Через леса, через моря
+    Колдун несёт богатыря;
+    В темнице там царевна тужит,
+    А бурый волк ей верно служит;
+    Там ступа с Бабою Ягой
+    Идёт, бредёт сама собой,
+    Там царь Кащей над златом чахнет;
+    Там русский дух… там Русью пахнет!
+    И там я был, и мёд я пил;
+    У моря видел дуб зелёный;
+    Под ним сидел, и кот учёный
+    Свои мне сказки говорил.
+    """
+
+    # TODO Распечатайте в столбик букву и её частоту в тексте
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    у: 0.03
+    л: 0.04
+    к: 0.03
+    о: 0.08
+    м: 0.05
+    р: 0.05
+    ь: 0.01
+    я: 0.02
+    д: 0.05
+    б: 0.02
+    з: 0.02
+    е: 0.07
+    ё: 0.02
+    н: 0.06
+    ы: 0.02
+    й: 0.03
+    а: 0.08
+    т: 0.07
+    ц: 0.01
+    п: 0.02
+    и: 0.06
+    ч: 0.01
+    ю: 0.00
+    в: 0.04
+    с: 0.04
+    х: 0.02
+    г: 0.01
+    ш: 0.00
+    ж: 0.01
+    щ: 0.00
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 29 Oct 2023 19:57:07 UTC"
+record: -1
+solution_hidden: true
