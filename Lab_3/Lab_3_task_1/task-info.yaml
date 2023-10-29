@@ -1,0 +1,58 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 49
+    placeholder_text: '# TODO Напишите функцию для поиска индекса товара'
+    initial_state:
+      length: 49
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
+      def find_item_index(items, item):
+          for index, current_item in enumerate(items):
+              if current_item == item:
+                  return index
+  - offset: 322
+    length: 91
+    placeholder_text: "...  # TODO Вызовите функцию, что получить индекс товара"
+    initial_state:
+      length: 56
+      offset: 188
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: "find_item_index(items_list, find_item)"
+  text: |
+    # TODO Напишите функцию для поиска индекса товара
+
+
+    items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
+
+    for find_item in ['банан', 'груша', 'персик']:
+        index_item = ...  # TODO Вызовите функцию, что получить индекс товара
+        if index_item is not None:
+            print(f"Первое вхождение товара '{find_item}' имеет индекс {index_item}.")
+        else:
+            print(f"Товар '{find_item}' не найден в списке.")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Первое вхождение товара 'банан' имеет индекс 1.
+    Первое вхождение товара 'груша' имеет индекс 3.
+    Товар 'персик' не найден в списке.
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 29 Oct 2023 09:20:13 UTC"
+record: -1
+solution_hidden: true
