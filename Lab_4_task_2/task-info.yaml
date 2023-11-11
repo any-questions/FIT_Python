@@ -1,0 +1,128 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 39
+    placeholder_text: '# TODO импортировать необходимые молули'
+    initial_state:
+      length: 39
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
+      import csv
+      import json
+  - offset: 153
+    length: 40
+    placeholder_text: "...  # TODO считать содержимое csv файла"
+    initial_state:
+      length: 40
+      offset: 129
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
+      with open(INPUT_FILENAME) as f:
+              lines = [line for line in csv.DictReader(f)]
+  - offset: 309
+    length: 139
+    placeholder_text: "...  # TODO Сериализовать в файл с отступами равными 4"
+    initial_state:
+      length: 54
+      offset: 175
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
+      with open(OUTPUT_FILENAME, "w") as f:
+              json.dump(lines, f, indent=4)
+  text: |
+    # TODO импортировать необходимые молули
+
+
+    INPUT_FILENAME = "input.csv"
+    OUTPUT_FILENAME = "output.json"
+
+
+    def task() -> None:
+        ...  # TODO считать содержимое csv файла
+
+        ...  # TODO Сериализовать в файл с отступами равными 4
+
+
+    if __name__ == '__main__':
+        # Нужно для проверки
+        task()
+
+        with open(OUTPUT_FILENAME) as output_f:
+            for line in output_f:
+                print(line, end="")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |-
+    [
+        {
+            "longitude": "-122.050000",
+            "latitude": "37.370000",
+            "housing_median_age": "27.000000",
+            "total_rooms": "3885.000000",
+            "total_bedrooms": "661.000000",
+            "population": "1537.000000",
+            "households": "606.000000",
+            "median_income": "6.608500",
+            "median_house_value": "344700.000000"
+        },
+        {
+            "longitude": "-118.300000",
+            "latitude": "34.260000",
+            "housing_median_age": "43.000000",
+            "total_rooms": "1510.000000",
+            "total_bedrooms": "310.000000",
+            "population": "809.000000",
+            "households": "277.000000",
+            "median_income": "3.599000",
+            "median_house_value": "176500.000000"
+        },
+        {
+            "longitude": "-117.810000",
+            "latitude": "33.780000",
+            "housing_median_age": "27.000000",
+            "total_rooms": "3589.000000",
+            "total_bedrooms": "507.000000",
+            "population": "1484.000000",
+            "households": "495.000000",
+            "median_income": "5.793400",
+            "median_house_value": "270500.000000"
+        },
+        {
+            "longitude": "-118.360000",
+            "latitude": "33.820000",
+            "housing_median_age": "28.000000",
+            "total_rooms": "67.000000",
+            "total_bedrooms": "15.000000",
+            "population": "49.000000",
+            "households": "11.000000",
+            "median_income": "6.135900",
+            "median_house_value": "330000.000000"
+        }
+    ]
+  learner_created: false
+- name: input.csv
+  visible: true
+  learner_created: false
+- name: output.json
+  visible: true
+  learner_created: true
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 11 Nov 2023 17:07:06 UTC"
+record: -1
+solution_hidden: true
