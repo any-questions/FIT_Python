@@ -1,0 +1,19 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  text: |
+    # TODO Написать 3 класса с документацией и аннотацией типов
+
+    if __name__ == "__main__":
+        # TODO работоспособность экземпляров класса проверить с помощью doctest
+        pass
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Solved
+feedback:
+  time: "Sun, 04 Feb 2024 18:51:07 UTC"
+record: -1
+post_submission_on_open: true
